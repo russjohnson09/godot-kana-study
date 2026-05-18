@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bdgpov4x4mhe3"]
+
+[ext_resource type="Texture2D" uid="uid://dhpebgbnllhl8" path="res://assets/ZX/ZXA/Boss/8Boss/mmzxa_Condorrock.png" id="1_xgif4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtcfe"]
+atlas = ExtResource("1_xgif4")
+region = Rect2(114, 0, 19, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("1_xgif4")
+region = Rect2(133, 0, 19, 82)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtcfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtcfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1755338907]
+sprite_frames = SubResource("SpriteFrames_wtcfe")
