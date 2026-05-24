@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	
+	$draw_area.text = ""
 	print("ready")
 	
 #	https://docs.godotengine.org/en/4.4/getting_started/step_by_step/signals.html#connecting-a-signal-via-code
@@ -30,6 +31,8 @@ func _on_katakana_button_down(text) -> void:
 
 	$AudioStreamPlayer.stream = load(mp3_path)
 	$AudioStreamPlayer.play()
+	
+	$draw_area.text = text
 	
 	pass # Replace with function body.
 

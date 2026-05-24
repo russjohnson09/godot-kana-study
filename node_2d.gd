@@ -23,3 +23,9 @@ func _on_katakana_pressed() -> void:
 
 func _on_katakana_2_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_hiragana_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/hiragana.tscn")
+
+	pass # Replace with function body.

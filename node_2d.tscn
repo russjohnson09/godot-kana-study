@@ -28,6 +28,7 @@ stream = ExtResource("3_epypp")
 volume_db = 10.0
 
 [node name="Timer" type="Timer" parent="." unique_id=761445255]
+wait_time = 0.001
 one_shot = true
 autostart = true
 
@@ -53,7 +54,6 @@ theme_override_font_sizes/font_size = 100
 text = "ア"
 
 [node name="hiragana" type="Button" parent="." unique_id=1907958395]
-visible = false
 offset_left = 494.0
 offset_top = 376.0
 offset_right = 642.0
@@ -72,4 +72,5 @@ text = "x"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="katakana" to="." method="_on_katakana_pressed"]
+[connection signal="pressed" from="hiragana" to="." method="_on_hiragana_pressed"]
 [connection signal="pressed" from="katakana2" to="." method="_on_katakana_2_pressed"]

@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://b2agm33tybuv7"]
+[gd_scene format=3 uid="uid://cflho2khom1s3"]
 
-[ext_resource type="Script" uid="uid://djjyuv87koiny" path="res://scenes/katakana.gd" id="1_7rqf7"]
+[ext_resource type="Script" uid="uid://djjyuv87koiny" path="res://scenes/katakana.gd" id="1_mn7a4"]
 
-[node name="Katakana" type="Node2D" unique_id=1042600439]
-script = ExtResource("1_7rqf7")
+[node name="Hiragana" type="Node2D" unique_id=1042600439]
+script = ExtResource("1_mn7a4")
 
 [node name="katakana" type="Button" parent="." unique_id=1604542993 groups=["kana"]]
 offset_left = 1.0
@@ -11,7 +11,7 @@ offset_right = 91.0
 offset_bottom = 145.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 100
-text = "ア"
+text = "あ"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1867673435]
 anchor_mode = 0
@@ -19,7 +19,6 @@ anchor_mode = 0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=851601338]
 
 [node name="katakana2" type="Button" parent="." unique_id=540356912]
-z_index = 500
 offset_left = 906.0
 offset_top = 4.0
 offset_right = 996.0
@@ -35,7 +34,7 @@ offset_right = 93.0
 offset_bottom = 221.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 100
-text = "イ"
+text = "い"
 
 [node name="katakana4" type="Button" parent="." unique_id=1406856338 groups=["kana"]]
 offset_left = 7.0
@@ -44,7 +43,7 @@ offset_right = 97.0
 offset_bottom = 291.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 100
-text = "ウ"
+text = "う"
 
 [node name="katakana5" type="Button" parent="." unique_id=479243739 groups=["kana"]]
 offset_left = 8.0
@@ -53,7 +52,7 @@ offset_right = 98.0
 offset_bottom = 365.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 100
-text = "エ"
+text = "え"
 
 [node name="katakana6" type="Button" parent="." unique_id=496103797 groups=["kana"]]
 offset_left = 8.0
@@ -62,13 +61,13 @@ offset_right = 98.0
 offset_bottom = 444.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 100
-text = "オ"
+text = "お"
 
-[node name="draw_area" type="RichTextLabel" parent="." unique_id=1174449493]
+[node name="draw_area" type="RichTextLabel" parent="." unique_id=1578760537]
 z_index = -1
-offset_left = 509.0
+offset_left = 510.0
 offset_top = -41.0
-offset_right = 1095.0
+offset_right = 1096.0
 offset_bottom = 550.0
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 500
