@@ -7,4 +7,4 @@
 *.xcf
 !.gitignore
 
-# !big_challenges/*
+!big_challenges/*
