@@ -9,3 +9,12 @@ script = ExtResource("1_0e48y")
 [node name="Icon" type="Sprite2D" parent="." unique_id=1895276011]
 position = Vector2(85, 146)
 texture = ExtResource("1_wtcfe")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1620805752]
+offset_right = 197.0
+offset_bottom = 71.0
+text = "hello
+こんにちは！"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=931469554]
+anchor_mode = 0
