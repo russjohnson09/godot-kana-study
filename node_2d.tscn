@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://4pqund3nukl7"]
 
+[ext_resource type="Texture2D" uid="uid://y722jcu8y6or" path="res://assets/big_challenges/big_challenges_1.png" id="1_wtcfe"]
+
 [node name="Node2D" type="Node2D" unique_id=87108858]
+
+[node name="BigChallenges1" type="Sprite2D" parent="." unique_id=1379593024]
+position = Vector2(135, 104)
+texture = ExtResource("1_wtcfe")
