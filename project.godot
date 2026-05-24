@@ -10,10 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Kana"
-run/main_scene="uid://4pqund3nukl7"
-config/features=PackedStringArray("4.6", "Mobile")
-boot_splash/show_image=false
+config/name="kana-study"
+run/main_scene="uid://dddtd746641tu"
+config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/use_filter=false
 config/icon="uid://cqg3hafxba2a8"
 
@@ -23,7 +22,6 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/mode=3
 window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [physics]
 
@@ -31,7 +29,7 @@ window/stretch/scale_mode="integer"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
