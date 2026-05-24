@@ -2,19 +2,62 @@
 
 [ext_resource type="Script" uid="uid://dc5qrdx3dcwjh" path="res://node_2d.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://denyomy7vetvv" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="AudioStream" uid="uid://tiqaxbqpx8k1" path="res://assets/shorts/kana_lesson/Kana Study.mp3" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://cqg3hafxba2a8" path="res://assets/wikimedia_commons/Japanese_Katakana_A.svg" id="4_0hol4"]
 
 [node name="Node2D" type="Node2D" unique_id=614202188]
 script = ExtResource("1_0e48y")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1895276011]
-position = Vector2(85, 146)
+position = Vector2(-237, 127)
 texture = ExtResource("1_wtcfe")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1620805752]
-offset_right = 197.0
-offset_bottom = 71.0
+offset_left = -356.0
+offset_top = -86.0
+offset_right = -159.0
+offset_bottom = -15.0
 text = "hello
 こんにちは！"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=931469554]
 anchor_mode = 0
+
+[node name="Intro" type="AudioStreamPlayer" parent="." unique_id=816751948]
+stream = ExtResource("3_epypp")
+volume_db = 10.0
+
+[node name="Timer" type="Timer" parent="." unique_id=761445255]
+one_shot = true
+autostart = true
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=768103030]
+offset_left = 167.0
+offset_top = 68.0
+offset_right = 950.0
+offset_bottom = 410.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Kana Study
+カナべんきょう"
+
+[node name="JapaneseKatakanaA" type="Sprite2D" parent="." unique_id=464824579]
+position = Vector2(-290, 416)
+texture = ExtResource("4_0hol4")
+
+[node name="katakana" type="Button" parent="." unique_id=419479664]
+offset_left = 256.0
+offset_top = 376.0
+offset_right = 404.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 100
+text = "ア"
+
+[node name="hiragana" type="Button" parent="." unique_id=1907958395]
+offset_left = 494.0
+offset_top = 376.0
+offset_right = 642.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 100
+text = "あ"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
