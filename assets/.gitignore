@@ -1,2 +1,10 @@
-*
+*.png
+*.mp3
+*.mp4
+*.gif
+*.ogv
+*.mkv
+*.xcf
 !.gitignore
+
+!big_challenges/*
