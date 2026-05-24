@@ -1,27 +1,24 @@
 [gd_scene format=3 uid="uid://4pqund3nukl7"]
 
 [ext_resource type="Script" uid="uid://c5y2iehiq885n" path="res://node_2d.gd" id="1_epypp"]
-[ext_resource type="Texture2D" uid="uid://y722jcu8y6or" path="res://assets/big_challenges/big_challenges_1.png" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://cqg3hafxba2a8" path="res://assets/wikimedia_commons/Japanese_Katakana_A.svg" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://bgpypckk6nbrq" path="res://animations/big_challenges.tscn" id="3_epypp"]
 
 [node name="Node2D" type="Node2D" unique_id=87108858]
 script = ExtResource("1_epypp")
 
-[node name="BigChallenges1" type="Sprite2D" parent="." unique_id=1379593024]
-position = Vector2(135, 104)
-texture = ExtResource("1_wtcfe")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1414598615]
-
-[node name="JapaneseKatakanaA" type="Sprite2D" parent="." unique_id=57906407]
-position = Vector2(469, 222)
-texture = ExtResource("2_0e48y")
+anchor_mode = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1798722182]
-offset_left = 54.0
-offset_top = 253.0
-offset_right = 228.0
-offset_bottom = 348.0
+offset_left = 160.0
+offset_top = 154.99998
+offset_right = 5340.9526
+offset_bottom = 2316.9048
+scale = Vector2(0.21, 0.21)
+theme_override_font_sizes/normal_font_size = 500
 text = "hello
 
 こんにちは！"
+
+[node name="BigChallenges" parent="." unique_id=981738332 instance=ExtResource("3_epypp")]
+position = Vector2(2056, 55)
