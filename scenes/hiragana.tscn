@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cflho2khom1s3"]
 
 [ext_resource type="Script" uid="uid://djjyuv87koiny" path="res://scenes/katakana.gd" id="1_mn7a4"]
+[ext_resource type="PackedScene" uid="uid://da6dh8nk8qtnf" path="res://scenes/draw.tscn" id="2_ffw6u"]
 
 [node name="Hiragana" type="Node2D" unique_id=1042600439]
 script = ExtResource("1_mn7a4")
@@ -72,5 +73,7 @@ offset_bottom = 550.0
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 500
 text = "ア"
+
+[node name="Draw" parent="." unique_id=362244973 instance=ExtResource("2_ffw6u")]
 
 [connection signal="pressed" from="katakana2" to="." method="_on_katakana_2_pressed"]

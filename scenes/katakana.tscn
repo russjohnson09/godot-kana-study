@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2agm33tybuv7"]
 
 [ext_resource type="Script" uid="uid://djjyuv87koiny" path="res://scenes/katakana.gd" id="1_7rqf7"]
+[ext_resource type="PackedScene" uid="uid://da6dh8nk8qtnf" path="res://scenes/draw.tscn" id="2_wc4cs"]
 
 [node name="Katakana" type="Node2D" unique_id=1042600439]
 script = ExtResource("1_7rqf7")
@@ -65,6 +66,7 @@ theme_override_font_sizes/font_size = 100
 text = "オ"
 
 [node name="draw_area" type="RichTextLabel" parent="." unique_id=1174449493]
+self_modulate = Color(1, 1, 1, 0.23529412)
 z_index = -1
 offset_left = 509.0
 offset_top = -41.0
@@ -73,5 +75,42 @@ offset_bottom = 550.0
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 500
 text = "ア"
+
+[node name="ColorRect" type="ColorRect" parent="draw_area" unique_id=116264896]
+visible = false
+modulate = Color(0.3019608, 0.3019608, 0.3019608, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 351.0
+offset_right = 373.0
+offset_bottom = 373.0
+
+[node name="ColorRect" type="ColorRect" parent="draw_area/ColorRect" unique_id=410047689]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 60.0
+offset_right = 351.0
+offset_bottom = 81.0
+
+[node name="ColorRect2" type="ColorRect" parent="draw_area/ColorRect" unique_id=1616116045]
+visible = false
+layout_mode = 0
+offset_left = 244.0
+offset_top = -195.0
+offset_right = 265.0
+offset_bottom = 214.0
+
+[node name="ColorRect3" type="ColorRect" parent="draw_area/ColorRect" unique_id=1694979478]
+visible = false
+layout_mode = 0
+offset_left = 112.0
+offset_top = -202.0
+offset_right = 133.0
+offset_bottom = 207.0
+
+[node name="Draw" parent="." unique_id=2142622723 instance=ExtResource("2_wc4cs")]
+z_index = 50
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="katakana2" to="." method="_on_katakana_2_pressed"]
