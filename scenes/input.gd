@@ -42,12 +42,14 @@ func _input(event):
 		get_tree().change_scene_to_file("res://node_2d.tscn")
 
 	# Mouse in viewport coordinates.
-	if event is InputEventMouseButton:
+	#if (event is InputEventMouseButton) or 
+	if (event is InputEventScreenTouch) or (event is InputEventMouseButton):
 		click = event.pressed
+		#event.is_pressed()
 		#print("Mouse Click/Unclick at: ", event.position)
-		if click:
-			do_redraw()
-		else:
+		#if event.pressed():
+			#do_redraw()
+		if not click:
 			old_pos = Vector2(-1,-1)
 
 	elif event is InputEventMouseMotion:
