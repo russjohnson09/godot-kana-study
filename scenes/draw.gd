@@ -1,6 +1,9 @@
 extends Node2D
 
 @export var mouse_pos: Vector2 = Vector2(0.0,0.0)
+@export var old_pos: Vector2 = Vector2(-1.0,-1.0)
+
+@export var brush_size: float = 4.0
 
 #https://docs.godotengine.org/en/stable/tutorials/rendering/viewports.html
 #https://docs.godotengine.org/en/stable/classes/class_subviewport.html#class-subviewport-property-render-target-clear-mode
@@ -64,8 +67,11 @@ func _draw():
 	
 #	get current mouse position.
 # on click do something.
-	draw_rect(Rect2(mouse_pos, Vector2(50.0, 50.0)), Color.RED)
+	#draw_rect(Rect2(mouse_pos, Vector2(brush_size, brush_size)), Color.RED)
 	
+	
+	var antialiased = true
+	draw_line(old_pos, mouse_pos, Color.WHITE, brush_size, antialiased)
 	
 
 	

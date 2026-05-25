@@ -10,18 +10,24 @@ extends Node2D
 		#queue_redraw()
 
 
+var old_pos = Vector2(-10.0,-10.0)
 var mouse_pos = Vector2(0.0,0.0)
+
 var click = false
 
 @export var drawer: Node2D
 
 func do_redraw():
 	drawer.mouse_pos = mouse_pos
+	if old_pos.x < 0.0:
+		old_pos = mouse_pos
+	drawer.old_pos = old_pos
 	drawer.queue_redraw()
+	old_pos = drawer.mouse_pos
 
 
 func _input(event):
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 #	https://docs.godotengine.org/en/4.4/tutorials/inputs/mouse_and_input_coordinates.html
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://node_2d.tscn")
@@ -32,6 +38,8 @@ func _input(event):
 		#print("Mouse Click/Unclick at: ", event.position)
 		if click:
 			do_redraw()
+		else:
+			old_pos = Vector2(-1,-1)
 
 	elif event is InputEventMouseMotion:
 		print("Mouse Motion at: ", event.position)
