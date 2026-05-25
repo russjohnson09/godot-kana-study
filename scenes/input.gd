@@ -15,7 +15,16 @@ var mouse_pos = Vector2(0.0,0.0)
 
 var click = false
 
+@export var brush_size: float = 5.0
+
 @export var drawer: Node2D
+
+
+func _ready() -> void:
+	drawer.brush_size = brush_size
+
+func clear():
+	$SubViewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ONCE
 
 func do_redraw():
 	drawer.mouse_pos = mouse_pos

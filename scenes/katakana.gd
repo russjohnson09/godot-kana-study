@@ -54,6 +54,10 @@ func _input(event):
 
 
 func _on_katakana_button_down(text) -> void:
+	
+	$Draw.clear()
+	
+	
 	$AudioStreamPlayer.volume_db = 10.0
 	
 	var mp3_path = "res://assets/shorts/kana_lesson/" + text+ ".mp3"
